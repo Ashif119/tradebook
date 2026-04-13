@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Manrope", sans-serif;
+
+  --color-primary: #00685d;
+  --color-primary-container: #008376;
+  --color-on-primary: #ffffff;
+  --color-secondary: #7e5700;
+  --color-secondary-container: #feb300;
+  --color-on-secondary: #ffffff;
+  --color-surface: #f9f9f9;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #3d4946;
+  --color-outline: #6d7a77;
+  --color-outline-variant: #bcc9c5;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+/* Custom utility for the "Architectural Ledger" look */
+@layer utilities {
+  .ledger-shadow {
+    box-shadow: 0 32px 64px -12px rgba(0, 104, 93, 0.08);
+  }
+  
+  .glass-sidebar {
+    @apply bg-teal-900/95 backdrop-blur-xl;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
